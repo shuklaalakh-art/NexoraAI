@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Background Gradient matching the user's artwork -->
+    <radialGradient id="bgCanvas" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#070f26"/>
+      <stop offset="50%" stop-color="#030611"/>
+      <stop offset="100%" stop-color="#010206"/>
+    </radialGradient>
+
+    <!-- Ribbon Left Stem: Cyan to Blue -->
+    <linearGradient id="ribbonLeft" x1="0%" y1="100%" x2="60%" y2="0%">
+      <stop offset="0%" stop-color="#0052cc"/>
+      <stop offset="35%" stop-color="#00a6fb"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+
+    <!-- Ribbon Diagonal: Cyan -> Deep Blue -> Indigo -> Purple -> Magenta -->
+    <linearGradient id="ribbonDiag" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="25%" stop-color="#0066ff"/>
+      <stop offset="52%" stop-color="#4f11aa"/>
+      <stop offset="78%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Ribbon Right Fold: Magenta -> Coral -> Amber Gold -->
+    <linearGradient id="ribbonRight" x1="20%" y1="90%" x2="80%" y2="10%">
+      <stop offset="0%" stop-color="#a21caf"/>
+      <stop offset="35%" stop-color="#ec4899"/>
+      <stop offset="68%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+
+    <!-- The Glowing 'O' Torus Gradient: Cyan -> Indigo -> Magenta -> Orange -->
+    <linearGradient id="oRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="30%" stop-color="#3b82f6"/>
+      <stop offset="60%" stop-color="#a855f7"/>
+      <stop offset="85%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+
+    <!-- Underline Left Accent: Cyan fade -->
+    <linearGradient id="lineLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#00b4d8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Underline Right Accent: Magenta/Purple fade -->
+    <linearGradient id="lineRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#9333ea" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Sparkle Stars Gradients -->
+    <radialGradient id="sparkleGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#fef08a"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sparkleCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#67e8f9"/>
+      <stop offset="75%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft Ambient Lights -->
+    <filter id="softGlowWide" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <filter id="bloomMedium" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="1200" height="800" fill="url(#bgCanvas)" />
+
+  <!-- Ambient Light Orbs behind the 'N' -->
+  <circle cx="530" cy="270" r="180" fill="#00b4d8" opacity="0.22" filter="url(#softGlowWide)" />
+  <circle cx="690" cy="300" r="160" fill="#ec4899" opacity="0.25" filter="url(#softGlowWide)" />
+  <circle cx="700" cy="230" r="120" fill="#f59e0b" opacity="0.20" filter="url(#softGlowWide)" />
+
+  <!-- ==================== PART 1: 3D RIBBON 'N' ==================== -->
+  <g transform="translate(140, 30)" filter="url(#bloomMedium)">
+    <!-- Right Upward Flame Fold (Orange/Magenta Back-Fold) -->
+    <path d="M 465 410 
+             C 515 422, 570 380, 582 300
+             C 592 245, 572 178, 540 128
+             C 532 115, 520 125, 518 138
+             C 508 195, 525 258, 524 305
+             C 522 352, 488 382, 448 386
+             Z" 
+          fill="url(#ribbonRight)" />
+
+    <!-- Diagonal Sweep (Cyan -> Deep Blue -> Indigo -> Purple -> Magenta) -->
+    <path d="M 330 125
+             C 368 122, 410 165, 452 230
+             C 495 295, 538 368, 565 398
+             C 578 412, 562 426, 540 420
+             C 492 412, 448 350, 406 288
+             C 364 225, 320 152, 330 125
+             Z"
+          fill="url(#ribbonDiag)" />
+
+    <!-- Left Pillar & Front Loop (Cyan / Electric Blue Fold) -->
+    <path d="M 308 395
+             C 268 395, 248 350, 248 288
+             C 248 205, 268 135, 312 120
+             C 334 112, 348 132, 348 158
+             C 348 190, 330 248, 316 305
+             C 305 348, 312 382, 335 392
+             C 342 395, 332 405, 308 395
+             Z"
+          fill="url(#ribbonLeft)" />
+
+    <!-- Left Pillar Curvature Highlight -->
+    <path d="M 312 120
+             C 330 135, 340 165, 335 208
+             C 326 262, 308 315, 302 365
+             C 298 340, 298 305, 302 255
+             C 308 202, 318 152, 312 120
+             Z"
+          fill="#ffffff" opacity="0.32" />
+
+    <!-- Specular Highlight along Diagonal -->
+    <path d="M 346 138
+             C 388 192, 442 272, 492 336
+             C 485 336, 432 268, 388 198
+             C 360 158, 350 138, 346 138
+             Z"
+          fill="#ffffff" opacity="0.22" />
+
+    <!-- Top Left Rim Glow Accent -->
+    <path d="M 292 130
+             C 312 118, 335 118, 352 128" 
+          fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Right Amber Wing Highlight -->
+    <path d="M 574 265
+             C 582 228, 575 172, 548 132"
+          fill="none" stroke="#fef08a" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- CELESTIAL SPARKLE STARS (Exact match to uploaded logo) -->
+  <!-- Top Primary Gold Sparkle Star -->
+  <g transform="translate(745, 185)">
+    <path d="M 0 -34 Q 0 0 -34 0 Q 0 0 0 34 Q 0 0 34 0 Q 0 0 0 -34 Z" fill="url(#sparkleGold)" />
+    <circle cx="0" cy="0" r="5" fill="#ffffff" />
+  </g>
+
+  <!-- Secondary Cyan Sparkle Star -->
+  <g transform="translate(784, 245)">
+    <path d="M 0 -20 Q 0 0 -20 0 Q 0 0 0 20 Q 0 0 20 0 Q 0 0 0 -20 Z" fill="url(#sparkleCyan)" />
+    <circle cx="0" cy="0" r="3" fill="#ffffff" />
+  </g>
+
+  <!-- Small Cyan Accent Sparkle -->
+  <g transform="translate(735, 268)">
+    <path d="M 0 -13 Q 0 0 -13 0 Q 0 0 0 13 Q 0 0 13 0 Q 0 0 0 -13 Z" fill="url(#sparkleCyan)" opacity="0.85" />
+    <circle cx="0" cy="0" r="2" fill="#ffffff" />
+  </g>
+
+  <!-- ==================== PART 2: BRAND TYPOGRAPHY 'NEXORA' ==================== -->
+  <g id="brandTypography">
+    <!-- Letter N -->
+    <path d="M 205 600 L 235 600 L 235 528 L 305 600 L 335 600 L 335 475 L 305 475 L 305 548 L 235 475 L 205 475 Z"
+          fill="#f8fafc" />
+
+    <!-- Letter E -->
+    <path d="M 370 475 L 475 475 L 475 505 L 402 505 L 402 523 L 465 523 L 465 552 L 402 552 L 402 570 L 475 570 L 475 600 L 370 600 Z"
+          fill="#f8fafc" />
+
+    <!-- Letter X -->
+    <path d="M 505 475 L 538 475 L 570 528 L 602 475 L 635 475 L 588 538 L 638 600 L 605 600 L 570 548 L 535 600 L 502 600 L 552 538 Z"
+          fill="#f8fafc" />
+
+    <!-- Letter O: Iconic Glowing Gradient Torus Ring -->
+    <g transform="translate(685, 537.5)" filter="url(#bloomMedium)">
+      <!-- Outer Bloom -->
+      <circle cx="0" cy="0" r="64" fill="none" stroke="url(#oRingGrad)" stroke-width="26" opacity="0.4" filter="url(#softGlowWide)" />
+      <!-- Solid Glowing Torus Ring -->
+      <circle cx="0" cy="0" r="58" fill="none" stroke="url(#oRingGrad)" stroke-width="24" />
+      <!-- Core Inner Hollow -->
+      <circle cx="0" cy="0" r="45" fill="#030611" />
+    </g>
+
+    <!-- Letter R: With Futuristic Angled Slice -->
+    <path d="M 760 475 L 835 475 C 865 475, 882 490, 882 515 C 882 538, 868 550, 842 554 L 888 600 L 852 600 L 812 558 L 790 558 L 790 600 L 760 600 Z 
+             M 790 503 L 830 503 C 845 503, 852 508, 852 516 C 852 526, 844 532, 830 532 L 790 532 Z"
+          fill="#f8fafc" />
+
+    <!-- Letter A -->
+    <path d="M 945 475 L 978 475 L 1035 600 L 1002 600 L 988 568 L 935 568 L 921 600 L 888 600 Z 
+             M 961 508 L 945 542 L 977 542 Z"
+          fill="#f8fafc" />
+  </g>
+
+  <!-- ==================== PART 3: SUBTITLE 'BY ALAKH' ==================== -->
+  <g transform="translate(0, 660)">
+    <!-- Left Neon Accent Line -->
+    <line x1="230" y1="0" x2="400" y2="0" stroke="url(#lineLeft)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- 'BY ALAKH' Text -->
+    <text x="600" y="6"
+          text-anchor="middle"
+          font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+          font-weight="600"
+          font-size="24"
+          letter-spacing="12"
+          fill="#ffffff">
+      BY ALAKH
+    </text>
+
+    <!-- Right Neon Accent Line -->
+    <line x1="800" y1="0" x2="970" y2="0" stroke="url(#lineRight)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

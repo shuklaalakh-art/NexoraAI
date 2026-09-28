@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" width="720" height="1280">
+  <defs>
+    <linearGradient id="mbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="720" height="1280" fill="url(#mbg)" />
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="720" height="90" fill="#0b0f19" stroke="#1e293b" stroke-width="1" />
+  <circle cx="60" cy="45" r="22" fill="url(#mGrad)" />
+  <text x="100" y="52" fill="#ffffff" font-family="system-ui, sans-serif" font-size="24" font-weight="800">NEXORA</text>
+  <text x="215" y="52" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" font-weight="500">By Alakh</text>
+
+  <!-- Mobile Omnibox -->
+  <rect x="30" y="130" width="660" height="230" rx="20" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+  <text x="55" y="180" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="600">Enter prompt or task...</text>
+  <rect x="55" y="270" width="130" height="48" rx="12" fill="#0284c7" />
+  <text x="75" y="300" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Presentation</text>
+  <rect x="200" y="270" width="110" height="48" rx="12" fill="#1e293b" />
+  <text x="235" y="300" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Code</text>
+
+  <rect x="490" y="270" width="170" height="52" rx="14" fill="url(#mGrad)" />
+  <text x="525" y="303" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="800">RUN</text>
+
+  <!-- Model Response Stream Card 1 -->
+  <rect x="30" y="390" width="660" height="260" rx="18" fill="#090d16" stroke="#1e293b" stroke-width="1.5" />
+  <text x="55" y="435" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Google Gemini</text>
+  <line x1="55" y1="460" x2="635" y2="460" stroke="#1e293b" stroke-width="1" />
+  <rect x="55" y="485" width="550" height="16" rx="5" fill="#334155" />
+  <rect x="55" y="520" width="480" height="16" rx="5" fill="#334155" />
+  <rect x="55" y="555" width="520" height="16" rx="5" fill="#334155" />
+
+  <!-- Model Response Stream Card 2 -->
+  <rect x="30" y="680" width="660" height="260" rx="18" fill="#090d16" stroke="#1e293b" stroke-width="1.5" />
+  <text x="55" y="725" fill="#a855f7" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Anthropic Claude</text>
+  <line x1="55" y1="750" x2="635" y2="750" stroke="#1e293b" stroke-width="1" />
+  <rect x="55" y="775" width="550" height="16" rx="5" fill="#334155" />
+  <rect x="55" y="810" width="490" height="16" rx="5" fill="#334155" />
+  <rect x="55" y="845" width="530" height="16" rx="5" fill="#334155" />
+
+  <!-- Consensus Synthesizer Card -->
+  <rect x="30" y="970" width="660" height="250" rx="18" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+  <text x="55" y="1015" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Unified Consensus &amp; Synthesis</text>
+  <line x1="55" y1="1040" x2="635" y2="1040" stroke="#1e293b" stroke-width="1" />
+  <rect x="55" y="1065" width="560" height="16" rx="5" fill="#1e293b" />
+  <rect x="55" y="1100" width="500" height="16" rx="5" fill="#1e293b" />
+</svg>

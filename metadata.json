@@ -1,0 +1,6 @@
+{
+  "name": "NEXORA AI",
+  "description": "One prompt. Every intelligence. Unified multi-model AI command center created by Alakh Shukla to connect, compare, synthesize, and orchestrate Google Gemini, OpenAI, Claude, Perplexity, Copilot, Figma, and Gamma.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,56 @@
+{
+  "packageId": "com.alakh.nexora",
+  "host": "ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app",
+  "name": "NEXORA AI - One prompt. Every intelligence.",
+  "launcherName": "NEXORA",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "themeColor": "#020617",
+  "navigationColor": "#020617",
+  "navigationColorDark": "#020617",
+  "navigationDividerColor": "#1E293B",
+  "navigationDividerColorDark": "#1E293B",
+  "backgroundColor": "#020617",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app/pwa-512x512.png",
+  "maskableIconUrl": "https://ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app/pwa-maskable-512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "nexora"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Presentation Mode",
+      "short_name": "Slides",
+      "url": "/?mode=presentation",
+      "icon": "https://ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app/pwa-192x192.png"
+    },
+    {
+      "name": "Code Studio",
+      "short_name": "Code",
+      "url": "/?mode=code",
+      "icon": "https://ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app/pwa-192x192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://ais-dev-bgl2gyeaiqntktnyu37xr7-417602105349.asia-east1.run.app/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": {
+      "enabled": false
+    },
+    "locationDelegation": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false
+}

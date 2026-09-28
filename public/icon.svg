@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="iconBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0a1226"/>
+      <stop offset="45%" stop-color="#040816"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </radialGradient>
+
+    <!-- Squircle Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Ribbon Left Stem: Cyan to Blue -->
+    <linearGradient id="ribbonLeft" x1="0%" y1="100%" x2="60%" y2="0%">
+      <stop offset="0%" stop-color="#0066ff"/>
+      <stop offset="40%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+
+    <!-- Ribbon Diagonal: Cyan -> Deep Blue -> Indigo -> Purple -> Magenta -->
+    <linearGradient id="ribbonDiag" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="25%" stop-color="#0066ff"/>
+      <stop offset="55%" stop-color="#5b21b6"/>
+      <stop offset="80%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Ribbon Right Fold: Magenta -> Coral -> Amber Gold -->
+    <linearGradient id="ribbonRight" x1="20%" y1="90%" x2="80%" y2="10%">
+      <stop offset="0%" stop-color="#c026d3"/>
+      <stop offset="35%" stop-color="#ec4899"/>
+      <stop offset="70%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+
+    <!-- Inner Shadow / Crease Fold -->
+    <linearGradient id="innerCrease" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Sparkle Gold Gradient -->
+    <radialGradient id="sparkleGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#fde047"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sparkle Cyan Gradient -->
+    <radialGradient id="sparkleCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#67e8f9"/>
+      <stop offset="80%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="glowBloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28" />
+    </filter>
+  </defs>
+
+  <!-- Dark Obsidian Squircle Canvas -->
+  <rect x="8" y="8" width="496" height="496" rx="116" fill="url(#iconBg)" stroke="url(#borderGrad)" stroke-width="2.5"/>
+
+  <!-- Subtle Inner Ambient Glow Behind 'N' -->
+  <circle cx="210" cy="240" r="130" fill="#00d2ff" opacity="0.18" filter="url(#softGlow)" />
+  <circle cx="330" cy="270" r="110" fill="#ec4899" opacity="0.22" filter="url(#softGlow)" />
+  <circle cx="340" cy="220" r="90" fill="#f59e0b" opacity="0.16" filter="url(#softGlow)" />
+
+  <!-- 3D RIBBON 'N' GROUP -->
+  <g transform="translate(10, -5)" filter="url(#glowBloom)">
+
+    <!-- LAYER 1: Right Upward Swell Fold (Orange/Magenta Back-Fold) -->
+    <!-- Curves up from behind bottom right to form the right pillar of N -->
+    <path d="M 285 365 
+             C 320 375, 365 345, 375 280
+             C 382 235, 368 185, 345 145
+             C 340 135, 332 142, 330 152
+             C 322 195, 336 245, 335 285
+             C 334 320, 305 342, 275 345
+             Z" 
+          fill="url(#ribbonRight)" />
+
+    <!-- LAYER 2: Diagonal Sweep (From Top Left Shoulder to Bottom Right) -->
+    <!-- Sweeps over the left fold and flows down toward right -->
+    <path d="M 188 140
+             C 215 138, 245 170, 275 220
+             C 305 270, 335 328, 355 352
+             C 365 365, 352 376, 335 372
+             C 300 366, 268 318, 238 268
+             C 208 218, 178 160, 188 140
+             Z"
+          fill="url(#ribbonDiag)" />
+
+    <!-- LAYER 3: Left Pillar & Front Loop (Cyan / Electric Blue Fold) -->
+    <!-- Rises from bottom left, loops smoothly up and forms the front left stroke -->
+    <path d="M 172 355
+             C 142 355, 128 320, 128 270
+             C 128 205, 142 148, 175 136
+             C 192 130, 202 145, 202 165
+             C 202 190, 188 235, 178 280
+             C 170 315, 175 345, 192 352
+             C 198 355, 190 362, 172 355
+             Z"
+          fill="url(#ribbonLeft)" />
+
+    <!-- Left Pillar Inner Highlight & Volumetric Crease -->
+    <path d="M 175 136
+             C 188 148, 196 172, 192 205
+             C 186 248, 172 290, 168 330
+             C 165 310, 164 280, 168 240
+             C 172 198, 180 160, 175 136
+             Z"
+          fill="#ffffff" opacity="0.32" />
+
+    <!-- Crease / Deep Depth Shadow where diagonal folds beneath right arm -->
+    <path d="M 285 295
+             C 298 322, 318 348, 338 358
+             C 328 350, 312 335, 302 310
+             C 296 295, 290 285, 285 295
+             Z"
+          fill="url(#innerCrease)" opacity="0.7" />
+
+    <!-- Diagonal Surface Shimmer / Specular Sheen -->
+    <path d="M 200 152
+             C 230 195, 268 255, 305 305
+             C 300 305, 260 250, 230 195
+             C 210 165, 202 152, 200 152
+             Z"
+          fill="#ffffff" opacity="0.22" />
+
+    <!-- Top Left Rim Highlight -->
+    <path d="M 160 145
+             C 175 136, 192 135, 205 142" 
+          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Right Amber Wing Highlight -->
+    <path d="M 368 250
+             C 375 220, 370 178, 350 148"
+          fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+  </g>
+
+  <!-- CELESTIAL SPARKLE STARS (Exact match to uploaded logo) -->
+  <!-- Top Primary Gold Sparkle Star -->
+  <g transform="translate(372, 132)">
+    <path d="M 0 -22 Q 0 0 -22 0 Q 0 0 0 22 Q 0 0 22 0 Q 0 0 0 -22 Z" fill="url(#sparkleGold)" />
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" />
+  </g>
+
+  <!-- Secondary Cyan Sparkle Star -->
+  <g transform="translate(398, 172)">
+    <path d="M 0 -13 Q 0 0 -13 0 Q 0 0 0 13 Q 0 0 13 0 Q 0 0 0 -13 Z" fill="url(#sparkleCyan)" />
+    <circle cx="0" cy="0" r="2" fill="#ffffff" />
+  </g>
+
+  <!-- Small Cyan Accent Sparkle -->
+  <g transform="translate(366, 186)">
+    <path d="M 0 -8 Q 0 0 -8 0 Q 0 0 0 8 Q 0 0 8 0 Q 0 0 0 -8 Z" fill="url(#sparkleCyan)" opacity="0.85" />
+    <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
+  </g>
+</svg>
